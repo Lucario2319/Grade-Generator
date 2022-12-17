@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Grade Generator</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+    <header><h1>Grade Generator</h1></header>
+    <div class="container">
+        <!-- for and id should have same values -->
+        <form>
+            <fieldset id="courseDetails">
+                <legend>Course Details</legend>
+                <div class="flexy">
+                    <label for="title">Subject Name</label>
+                    <input required type="text" placeholder="Calculus 1" id="title" name="title">
+                </div>
+                <!-- <br> -->
+                <div class="flexy">
+                    <label for="compsNum">How many components does it have?</label>
+                    <input required type="number" value="1" min="1" max="8" id="compsNum" name="compsNum">
+                </div>
+                <!-- <br> -->
+                <input class="btn" type="button" name="Sbutton" style="display: block;" value="Proceed Ahead"
+                    onclick="process(this.form)">
+            </fieldset>
+
+            <fieldset id="weightages">
+                <legend>Weightage Details</legend>
+                <div id="weightPart">
+                </div>
+                <p class="msg"></p>
+                <input class="btn" type="button" name="Vbutton" style="display:none;" disabled value="Check Validity"
+                    onclick="weightcheck(this.form)">
+                <!-- <input class="btn" type="button" name="Abutton" value="Add component marks" onclick="componentGen(this.form)">  -->
+            </fieldset>
+
+            <fieldset id="components">
+                <legend>Component Details</legend>
+                <div id="assessPart"></div>
+                <input class="btn" type="button" name="Abutton" style="display:none;" disabled value="Find Grade"
+                    onclick="assessCheck(this.form)">
+                <!-- <label for=""></label>
+                <input type="text" id=""> -->
+            </fieldset>
+        </form>
+        <div id="results">
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
